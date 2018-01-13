@@ -1,0 +1,151 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Welcome to Department WebSite</title>
+       <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    
+
+    <script src="Scripts/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    
+
+    <script type="text/javascript">
+        
+
+        $('.carousel').carousel({
+            interval: 1200
+        });
+        $(window).load(function () {
+            $('#Homemodal').modal('show');
+        });
+        
+      </script>
+   
+    
+</head>
+
+     
+      
+    
+   
+<body>
+ <form runat="server">
+
+
+   <div class="container">
+    <nav class="navbar navbar-default " role="navigation">
+            <div class="navbar-header">
+                
+                <button type="button" class="navbar-toggle" data-toggle="collapse" 
+                    data-target="#menu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="Default.aspx">
+                    <a href="#" class="pull-left">
+
+                    <img src="images/siuc.PNG" alt="SIUC CSE" height="50"/>
+                                                         </a>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="menu">
+                
+                    
+                <div class="navbar navbar-right">
+                    <a href="signup.aspx" class="btn btn-primary navbar-btn">signup</a>&nbsp;&nbsp;
+
+                    <a href="Login Page.aspx" class="btn btn-primary navbar-btn">Log in</a>&nbsp;&nbsp;
+               
+                    </div>
+            </div>
+ </nav> 
+        </div>
+ <br />
+ <br />     
+                   
+<div class="container">        
+<div id="carousel-example-generic" class="carousel slide " data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+ 
+    <div>
+        <asp:Image ID="Image1" runat="server" Height="275px" Width="969px" ImageUrl="~/images/image1.jpg" />
+        <asp:Image ID="Image2" runat="server" Height="275px" Width="969px" ImageUrl="~/images/image2.jpg" Visible="False" />
+        <asp:Image ID="Image3" runat="server" Height="275px" Width="969px" ImageUrl="~/images/image3.jpg" Visible="False" />
+
+        <br />
+        <br />
+        <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="&lt;&lt;" Width="90px" />
+&nbsp;<asp:Button ID="Button4" runat="server" OnClick="Button4_Click1" Text="&gt;&gt;" Width="75px" />
+
+        </div>
+    </div>
+</div>
+
+<br />
+     <div class="container">
+
+        
+        <div class="row">
+           
+                <h1 class="page-header">
+                    Welcome to CSE Department
+                 </h1>
+          
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><span class="fa fa-fw fa-check"></span>Courses</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p> Check currently avaliable Courses </p>
+                          <asp:Button ID="Button2" runat="server" Text="Click here" CssClass="btn btn-default" OnClientClick="window.open('staffdetails.aspx');" OnClick="Button2_Click"/>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><span class="fa fa-fw fa-gift"></span> Staff details</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Current Professors &amp; staff</p>
+                        <asp:Button ID="Button1" runat="server" Text="Click here" CssClass="btn btn-default" OnClientClick="window.open('courses.aspx');" OnClick="Button1_Click1"/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><span class="fa fa-fw fa-compass"></span>Contact Details</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Office No. : 618-536-2327</p>
+                        <p>Email : csinfo@cs.siu.edu</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+   </div>         
+            
+
+ </form>   
+</body>
+</html>
+   
+
+
